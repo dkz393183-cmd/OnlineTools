@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas Online Grátis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🛠️ Ferramentas Online</h1>
+        <p>Ferramentas úteis e gratuitas para o seu dia a dia</p>
+    </header>
+
+    <nav class="tool-selector">
+        <button class="tool-btn active" data-tool="qrcode">QR Code</button>
+        <button class="tool-btn" data-tool="converter">Conversor</button>
+        <button class="tool-btn" data-tool="calculator">Calculadora</button>
+    </nav>
+
+    <!-- Espaço para anúncios -->
+    <div class="ad-space">
+        <p>[ Espaço para Google AdSense ]</p>
+    </div>
+
+    <main>
+        <!-- Gerador de QR Code -->
+        <section id="qrcode" class="tool-section active">
+            <h2>Gerador de QR Code</h2>
+            <div class="tool-content">
+                <input type="text" id="qr-input" placeholder="Digite o texto ou URL">
+                <button onclick="generateQR()">Gerar QR Code</button>
+                <div id="qr-result"></div>
+            </div>
+        </section>
+
+        <!-- Conversor de Moedas -->
+        <section id="converter" class="tool-section">
+            <h2>Conversor de Moedas</h2>
+            <div class="tool-content">
+                <input type="number" id="amount" placeholder="Valor" value="1">
+                <select id="from-currency">
+                    <option value="BRL">Real (BRL)</option>
+                    <option value="USD">Dólar (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra (GBP)</option>
+                </select>
+                <span>para</span>
+                <select id="to-currency">
+                    <option value="USD">Dólar (USD)</option>
+                    <option value="BRL">Real (BRL)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra (GBP)</option>
+                </select>
+                <button onclick="convertCurrency()">Converter</button>
+                <div id="conversion-result"></div>
+            </div>
+        </section>
+
+        <!-- Calculadora de Média -->
+        <section id="calculator" class="tool-section">
+            <h2>Calculadora de Média Escolar</h2>
+            <div class="tool-content">
+                <input type="number" id="grade1" placeholder="Nota 1" step="0.1">
+                <input type="number" id="grade2" placeholder="Nota 2" step="0.1">
+                <input type="number" id="grade3" placeholder="Nota 3" step="0.1">
+                <input type="number" id="grade4" placeholder="Nota 4" step="0.1">
+                <button onclick="calculateAverage()">Calcular Média</button>
+                <div id="average-result"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Espaço para mais anúncios -->
+    <div class="ad-space">
+        <p>[ Espaço para Google AdSense ]</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Ferramentas Online - Todas as ferramentas são gratuitas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
